@@ -1,0 +1,4 @@
+__pycache__
+.env
+checkers/__pycache__
+utils/__pycache__
