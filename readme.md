@@ -30,17 +30,20 @@ selenium based solution to check whether yahoo mail address is clonable or not, 
 
 <div align="center" >
 
-## Example 1
+## Usage
 </div>
+&nbsp;
+
+1. Compose Username
+
+&nbsp;
 <img src="static/carbon1.png"></img>
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<div align="center">
+2. Type Username
 
-## Example 2
-</div>
-
+&nbsp;
 <img src="static/carbon2.png"></img>
 
 <div align="center">
@@ -50,7 +53,7 @@ selenium based solution to check whether yahoo mail address is clonable or not, 
 
 <p>
 
-- if YAHOO: "address" is green, then yahoo email is clonable
+- if YAHOO: "address" or HOTMAIL: "address" is green, then yahoo email is clonable
 - if FACEBOOK: "address" is green, then facebook account linked to the email is hackable 
 </p>
 
