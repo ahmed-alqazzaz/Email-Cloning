@@ -1,6 +1,6 @@
 <div align="center">
 
-# Email Cloner
+# Email Cloning
 </div>
 <div align="center">
 <p>
