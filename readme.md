@@ -46,6 +46,32 @@ selenium based solution to check whether yahoo mail address is clonable or not, 
 &nbsp;
 <img src="static/carbon2.png"></img>
 
+&nbsp;
+<div align="center">
+
+## Examples
+
+<div align="center">
+<p>
+
+ #### The Following Examples are fully automated by python script
+</p>
+</div>
+</div>
+
+1. Yahoo
+&nbsp;
+
+https://user-images.githubusercontent.com/85782358/192112721-e9907769-4458-4ce9-ace9-5a667ff26727.mp4
+
+&nbsp;
+
+2. Hotmail
+&nbsp;
+
+https://user-images.githubusercontent.com/85782358/192112887-effe9d14-06b7-4f04-8685-c085c72ed4c6.mp4
+
+&nbsp;
 <div align="center">
 
 ## Special Notes
@@ -53,7 +79,7 @@ selenium based solution to check whether yahoo mail address is clonable or not, 
 
 <p>
 
-- if YAHOO: "address" or HOTMAIL: "address" is green, then yahoo email is clonable
+- if YAHOO: "address" or HOTMAIL: "address" is green, then email is clonable
 - if FACEBOOK: "address" is green, then facebook account linked to the email is hackable 
 </p>
 
