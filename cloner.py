@@ -1,5 +1,6 @@
 from checkers.facebook_checker import FacebookChecker
 from checkers.yahoo_checker import YahooChecker
+from checkers.hotmail_checker import HotmailChecker
 from utils.helper import Helper
 
 from selenium import webdriver
@@ -11,7 +12,7 @@ from time import sleep
 
 
 
-class Cloner(YahooChecker,FacebookChecker,Helper):
+class Cloner(YahooChecker,HotmailChecker,FacebookChecker,Helper):
     def __init__(self):
         #set up chrome driver options 
         option = webdriver.ChromeOptions()
@@ -84,14 +85,23 @@ class Cloner(YahooChecker,FacebookChecker,Helper):
 
         return USERNAMES
     
+    @staticmethod
+    def Domain():
+        #return the selected mode in case user input is valid 
+        if (Domain := str(input("\nDomain(Yahoo/Hotmail): ")).lower().strip()) in ["yahoo","hotmail"]: return Domain
+        
+        #in case user input is not in the list
+        raise Exception("Domain is not valid") 
+   
     #check if the user wants to type username or compose username
     @staticmethod
     def mode():
-        #return the mode in case user input is valid 
-        if (mode := str(input("\nMode(Compose Username/Type Username): ")).upper().strip()) in ["COMPOSE USERNAME","TYPE USERNAME"]: return mode
+        #return the selected mode in case user input is valid 
+        if (mode := str(input("Mode(Compose Username/Type Username): ")).upper().strip()) in ["COMPOSE USERNAME","TYPE USERNAME"]: return mode
         
         #in case user input is not in the list
         raise Exception("Mode is not valid") 
+
     
     #return username if it is not too long
     @staticmethod

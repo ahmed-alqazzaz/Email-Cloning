@@ -6,32 +6,30 @@ from selenium.webdriver.common.by import By
 from utils.paths import PATHS
 from utils.yahoohelper import YahooHelper
 
-"""""
+"""
 This class is intended to check if the yahoo email address is clonable
 then check if it's linked with facebook account
-"""""
+
+"""
 class YahooChecker(YahooHelper):   
-    """"
-         this function will return True if the yahoo address is available
-         and false if it is not
-    """
     def __sign_up(self):
-        
         self.driver.get("https://login.yahoo.com/account/create")
+        
         #check if page is loaded
         #is_loaded is defined in utils\helper.py on line54
         if self.is_loaded() is False:
             raise Exception("Page is not loading")
         
-
-    def check_username(self,username):
+    """
+         this function will return True if the yahoo address is available
+         and false if it is not
+    """
+    def check_yahoo(self,username):
         # move to the first tab
         self.driver.switch_to.window(self.driver.window_handles[0])
         #if not on sign up page go to sign up page
         if self.driver.current_url != "https://login.yahoo.com/account/create" :
             self.__sign_up()
-        
-        self.username = username
         
         #type the username in the username placeholder
         #_type_email is defined in utils\helper.py on line 60
@@ -63,32 +61,4 @@ class YahooChecker(YahooHelper):
                 print(reg_error.get_attribute("data-error"))
                 raise Exception(f"{username} is invalid")
             
-            return False
-
-        
-
-        
-
-def main():
-    YahooCheckers = YahooChecker()
-    print(YahooCheckers.check_username("steve9"))
-    sleep(random.randint(2,4))
-    print(YahooCheckers.check_username("stevey34ghg"))
-    
-    
-    sleep(30)
-    YahooCheckers.driver.quit()
-
-# if __name__ == "__main__":
-#     main()
-
-
-
-
-        
-
-        
-    
-
-
-        
+            return False      
