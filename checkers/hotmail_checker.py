@@ -6,6 +6,8 @@ import random
 from utils.paths import PATHS
 from utils.hotmailhelper import HotmailHelper
 
+
+
 """""
 This class is intended to check if the hotmail address is clonable
 then check if it's linked with facebook account
@@ -38,7 +40,7 @@ class HotmailChecker(HotmailHelper):
         
         sleep(random.uniform(0.93,1.35))
         #in case there is no registeration error
-        if (reg_error := self.get_element(4,(By.XPATH,PATHS["hotmail"]["RegistrationError"]),"visibility")) is None:
+        if (reg_error := self.get_element(7,(By.XPATH,PATHS["hotmail"]["RegistrationError"]),"visibility")) is None:
             self._cancel_signup()
             return True
         

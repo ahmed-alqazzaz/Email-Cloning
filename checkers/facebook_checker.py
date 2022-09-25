@@ -44,7 +44,6 @@ class FacebookChecker(FacebookHelper):
         
         
         #Type the email then submit the form
-        #_type_email is defined in utils\helper.py on line 54
         EmailPlaceholder = self._type_email(email,"facebook")
         self._submit_email(EmailPlaceholder)
         
