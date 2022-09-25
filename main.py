@@ -1,8 +1,6 @@
 from cloner import Cloner
 from utils.colors import COLORS
 
-import colorama 
-
 from time import sleep
 
 def main():
@@ -11,7 +9,6 @@ def main():
     globals()["Domain"] = Cloner.Domain()
 
         
-
     #in case the user opts to check possible usernames from first and last name
     if Cloner.mode() == "COMPOSE USERNAME":
         #loop through each list of usernames and map each element with check function

@@ -1,7 +1,6 @@
 from time import sleep
 import random
-from typing import List
-from xml.dom.minidom import Element
+
 
 from utils.paths import PATHS
 from selenium.common.exceptions import TimeoutException
@@ -47,7 +46,7 @@ class Helper:
                 in case the number of requested selenium objects is or equal higher than the length of the available elements return the whole list of selenium objects
                 in case it's a list of objects and the number of requested objects is lower than the length of available elements return only the requested number of objects
             """
-            return Element if not isinstance(Element,List) or num_of_elements >= len(Element) else Element[num_of_elements:]
+            return Element if not isinstance(Element,list) or num_of_elements >= len(Element) else Element[num_of_elements:]
     
     #check if it least one of two elements is visible then return selenium object of the element
     def get_one_of_elements(self,time,location1,location2):
