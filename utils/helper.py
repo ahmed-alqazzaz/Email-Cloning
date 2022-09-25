@@ -14,7 +14,6 @@ class Helper:
         #check of the state of the element is in the list
         if state  not in ["visibility","presence"]:
             raise Exception("Element State is not valid")
-        EC.presence_of_all_elements_located
         
         #check if number of elements is less than 1
         if num_of_elements < 1:
