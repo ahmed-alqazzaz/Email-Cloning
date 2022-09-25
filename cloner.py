@@ -22,9 +22,9 @@ class Cloner(YahooChecker,HotmailChecker,FacebookChecker,Helper):
         
         #export environment variable
         load_dotenv()
+        
         #instantiate chrome driver
         PATH = rf"{os.getenv('CHROMEDRIVER_PATH')}"
-
         self.driver = webdriver.Chrome(executable_path = PATH,options = option)
         self.driver.delete_all_cookies()
         self.driver.maximize_window()
